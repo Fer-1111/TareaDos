@@ -5,12 +5,14 @@ public class Expendedor{
     private Deposito sprite;
     private Deposito fanta;
     private Deposito kem;
+    private int precio;
 
     public Expendedor(int cantBebidas, int cualBebida) {
         coca = new Deposito();
         sprite = new Deposito();
         fanta = new Deposito();
         kem = new Deposito();
+        precio = 1300;
         int serie;
         for (serie = 0; serie < cantBebidas; serie++) {
             coca.addBebida(new CocaCola(100 + serie));
@@ -30,7 +32,7 @@ public class Expendedor{
         if(m == null){ //PagoIncorrectoException cuando compra sin dinero
             throw new PagoIncorrectoException("Error, estas intentando comprar sin dinero");
         }
-        if(m < Bebida.precio ){ //Pago insuficiente, bebida por un valor inferior al precio
+        if(m < precio){ //Pago insuficiente, bebida por un valor inferior al precio
             throw new PagoInsuficienteException("Error su mone ingresada es inferior al precio");
         }
         if(){ // No hay Bebida 
