@@ -27,10 +27,15 @@ public class Expendedor{
     public Bebida comprarBebida(Moneda m, int cualBebida){
         Bebida = null;
         
-        if(m == null){ //PagoIncorrectoException
-            return null;
+        if(m == null){ //PagoIncorrectoException cuando compra sin dinero
+            throw new PagoIncorrectoException("Error, estas intentando comprar sin dinero");
         }
-        
+        if(m < Bebida.precio ){ //Pago insuficiente, bebida por un valor inferior al precio
+            throw new PagoInsuficienteException("Error su mone ingresada es inferior al precio");
+        }
+        if(){ // No hay Bebida 
+            
+        }
         
         
     }
