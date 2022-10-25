@@ -1,12 +1,15 @@
 package tarea2;
 
 public abstract class Bebida{
-    public Bebida(int numSerie){
-     
+    private int serie;
+    public Bebida(int serie){
+        this.serie = serie;
     }
     public int getSerie(){
+        return serie;
     }
     public abstract String beber();
+    public abstract int precio();
 }
 class Sprite extends Bebida {
 
@@ -16,6 +19,9 @@ class Sprite extends Bebida {
 
     public String beber() {
         return "sprite";
+    }
+    public int precio(){
+        return 1300;
     }
 
 }
@@ -28,6 +34,9 @@ class CocaCola extends Bebida {
     public String beber() {
         return "fanta";
     }
+    public int precio(){
+        return 1300;
+    }
 
 }
 class Fanta extends Bebida {
@@ -38,6 +47,9 @@ class Fanta extends Bebida {
 
     public String beber() {
         return "fanta";
+    }
+    public int precio(){
+        return 1300;
     }
 
 }
@@ -50,6 +62,9 @@ class Kem extends Bebida {
 
     public String beber() {
         return "kem";
+    }
+    public int precio(){
+        return 1300;
     }
 
 }
