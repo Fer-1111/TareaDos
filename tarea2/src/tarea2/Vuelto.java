@@ -7,5 +7,9 @@ public class Vuelto {
 
     public Vuelto() {
         monedasVuelto = new ArrayList<Moneda>();
-    }    
+    }   
+    
+    public void addMoneda(Moneda m){
+        monedasVuelto.add(m);
+    }
 }

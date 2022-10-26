@@ -51,7 +51,9 @@ public class Expendedor{
         
     }
     
-    public Moneda getVuelto(){ //retorna moneda, null si deposito está vacío
-        
-       // return Moneda1500.getValor();
+    public void getVuelto(){ //retorna moneda, null si deposito está vacío
+        Vuelto Billetera = new Vuelto();
+        Moneda m = new Moneda100();
+        Billetera.addMoneda(m);
+    }       
 }
