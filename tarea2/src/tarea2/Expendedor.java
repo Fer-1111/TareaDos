@@ -7,6 +7,7 @@ public class Expendedor {
     private Deposito fanta;
     private Deposito kem;
     private int precio;
+    public Vuelto vueltoMaquina;
 
     public Expendedor(int cantBebidas, int cualBebida) {
         coca = new Deposito();
@@ -89,9 +90,9 @@ public class Expendedor {
     }
 
     public void getVuelto() { //retorna moneda, null si deposito está vacío
-        Vuelto Billetera = new Vuelto();
+        //Vuelto VueltoMaquina = new Vuelto();
         Moneda m = new Moneda100();
-        Billetera.addMoneda(m);
+        vueltoMaquina.addMoneda(m);
     }
 }
 

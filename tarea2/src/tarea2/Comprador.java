@@ -3,22 +3,17 @@ package tarea2;
 public class Comprador{
     private String tipoBebida;
     private int serie;
-    
     public Comprador(Moneda m, int cualBebida, Expendedor exp){
-        if(cualBebida == 1){
-            tipoBebida = "CocaCola";
-        }
-        if(cualBebida == 2){
-            tipoBebida = "Sprite";
-        }
-        if(cualBebida == 3){
-            tipoBebida = "Fanta";
-        }
-        if(cualBebida == 4){
-            tipoBebida = "Kem";
-        }
+        try{
+            exp.comprarBebida(m, 1);
         
-    
+        } catch (PagoIncorrectoException ex) {
+            System.out.println("error: "+ex.getMessage());
+        } catch (PagoInsuficienteException ex) {
+            System.out.println("error: "+ex.getMessage());
+        } catch (NoHayBebidaException ex) {
+            System.out.println("error: "+ex.getMessage());
+        }
     }
     public int cuantoVuelto(){ //de vuelto        
         return 200;
