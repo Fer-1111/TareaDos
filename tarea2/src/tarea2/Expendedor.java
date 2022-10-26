@@ -26,7 +26,7 @@ public class Expendedor{
         if(cualBebida == 4){}
     }
     
-    public Bebida comprarBebida(Moneda m, int cualBebida){
+    /*public Bebida comprarBebida(Moneda m, int cualBebida){
         Bebida = null;
         
         if(m == null){ //PagoIncorrectoException cuando compra sin dinero
@@ -38,11 +38,10 @@ public class Expendedor{
         if(){ // No hay Bebida 
             
         }
-        
-        
+   
     }
     
     public Moneda getVuelto(){ //retorna moneda, null si deposito está vacío
-        
-    }
+        return null;
+    }*/
 }

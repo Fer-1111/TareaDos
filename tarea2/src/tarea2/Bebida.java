@@ -9,7 +9,6 @@ public abstract class Bebida{
         return serie;
     }
     public abstract String beber();
-    public abstract int precio();
 }
 class Sprite extends Bebida {
 
@@ -19,9 +18,6 @@ class Sprite extends Bebida {
 
     public String beber() {
         return "sprite";
-    }
-    public int precio(){
-        return 1300;
     }
 
 }
@@ -34,9 +30,6 @@ class CocaCola extends Bebida {
     public String beber() {
         return "fanta";
     }
-    public int precio(){
-        return 1300;
-    }
 
 }
 class Fanta extends Bebida {
@@ -47,9 +40,6 @@ class Fanta extends Bebida {
 
     public String beber() {
         return "fanta";
-    }
-    public int precio(){
-        return 1300;
     }
 
 }
@@ -62,9 +52,6 @@ class Kem extends Bebida {
 
     public String beber() {
         return "kem";
-    }
-    public int precio(){
-        return 1300;
     }
 
 }

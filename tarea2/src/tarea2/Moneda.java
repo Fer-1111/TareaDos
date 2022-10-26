@@ -10,7 +10,7 @@ class Moneda1500 extends Moneda{
     public Moneda1500(){
         super();
     }
-    public abstract int getValor(){
+    public int getValor(){
         return 1500;
     }
 }
