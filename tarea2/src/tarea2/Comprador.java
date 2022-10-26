@@ -19,6 +19,6 @@ public class Comprador{
         return 200;
     }
     public String queBebiste(){//el sonido de la Bebida: cocacola, sprite
-        
+        return null;
     }
 }
