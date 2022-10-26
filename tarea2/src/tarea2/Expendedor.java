@@ -43,7 +43,7 @@ public class Expendedor {
         }
     }
 
-    public Bebida comprarBebida(Moneda m, int cualBebida) throws PagoIncorrectoException , PagoInsuficienteException{
+    public Bebida comprarBebida(Moneda m, int cualBebida) throws PagoIncorrectoException , PagoInsuficienteException, NoHayBebidaException{
         Bebida b = null;
 
         if (m == null) { //PagoIncorrectoException cuando compra sin dinero
@@ -54,19 +54,19 @@ public class Expendedor {
         }
         //NohaybebidaException
         if(m.getValor() >= precio && coca.getBebida()==null){
-            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada")
+            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada");
         }
         
         if(m.getValor() >= precio && sprite.getBebida()==null){
-            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada")
+            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada");
         }
         
         if(m.getValor() >= precio && fanta.getBebida()==null){
-            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada")
+            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada");
         }
         
         if(m.getValor() >= precio && kem.getBebida()==null){
-            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada")
+            throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada");
         }
         
         
