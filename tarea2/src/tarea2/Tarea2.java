@@ -8,6 +8,7 @@ public class Tarea2 {
         Moneda luka = new Moneda1000();
         Expendedor n1 = new Expendedor(1,1000);
         Comprador cliente = new Comprador(luka, 1, n1);
+        System.out.println("jorge pt");
     }
     
 }
