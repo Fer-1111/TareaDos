@@ -14,34 +14,44 @@ public class Expendedor{
         kem = new Deposito();
         precio = 1300;
         int serie;
+        
         for (serie = 0; serie < cantBebidas; serie++) {
             coca.addBebida(new CocaCola(100 + serie));
-            sprite.addBebida(new Sprite(200 + serie));
-            fanta.addBebida(new Sprite(300 + serie));
-            kem.addBebida(new Sprite(400 + serie));
         }
-        if(cualBebida == 1){}
-        if(cualBebida == 2){}
-        if(cualBebida == 3){}
-        if(cualBebida == 4){}
+        for (serie = 0; serie < cantBebidas; serie++) {
+            sprite.addBebida(new Sprite(200 + serie));
+        }
+        for (serie = 0; serie < cantBebidas; serie++) {
+            fanta.addBebida(new Fanta(300 + serie));
+        }
+        for (serie = 0; serie < cantBebidas; serie++) {
+            kem.addBebida(new Kem(400 + serie));
+        }
+        
+        
+        if(cualBebida == 1){ //es coca
+            coca.getBebida();
+        }
+        if(cualBebida == 2){ //es sprite
+            sprite.getBebida();
+        }
+        if(cualBebida == 3){ // es fanta
+            fanta.getBebida();
+        }
+        if(cualBebida == 4){ // es kem
+            kem.getBebida();
+        }
     }
     
-    /*public Bebida comprarBebida(Moneda m, int cualBebida){
-        Bebida = null;
+    public Bebida comprarBebida(Moneda m, int cualBebida){
         
-        if(m == null){ //PagoIncorrectoException cuando compra sin dinero
-            throw new PagoIncorrectoException("Error, estas intentando comprar sin dinero");
-        }
-        if(m < precio){ //Pago insuficiente, bebida por un valor inferior al precio
-            throw new PagoInsuficienteException("Error su mone ingresada es inferior al precio");
-        }
-        if(){ // No hay Bebida 
-            
-        }
-   
+        
+        return null;
+        
+        
     }
     
     public Moneda getVuelto(){ //retorna moneda, null si deposito está vacío
-        return null;
-    }*/
+        
+       // return Moneda1500.getValor();
 }
