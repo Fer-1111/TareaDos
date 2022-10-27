@@ -1,7 +1,7 @@
 package tarea2;
 
 public abstract class Bebida{
-    private int serie;
+    private final int serie;
     public Bebida(int serie){
         this.serie = serie;
     }
@@ -9,6 +9,17 @@ public abstract class Bebida{
         return serie;
     }
     public abstract String beber();
+}
+class CocaCola extends Bebida {
+
+    public CocaCola(int serie) {
+        super(serie);
+    }
+
+    public String beber() {
+        return "coca";
+    }
+
 }
 class Sprite extends Bebida {
 
@@ -18,17 +29,6 @@ class Sprite extends Bebida {
 
     public String beber() {
         return "sprite";
-    }
-
-}
-class CocaCola extends Bebida {
-
-    public CocaCola(int serie) {
-        super(serie);
-    }
-
-    public String beber() {
-        return "fanta";
     }
 
 }
