@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Deposito {
 
-    private ArrayList<Bebida> ListBebidas;
+    private final ArrayList<Bebida> ListBebidas;
 
     public Deposito() {
-        ListBebidas = new ArrayList<Bebida>();
+        ListBebidas = new ArrayList<>();
     }
 
     public void addBebida(Bebida b) {
@@ -15,11 +15,13 @@ public class Deposito {
     }
 
     public Bebida getBebida() {
-        if (ListBebidas.size() > 0) {
+        if (ListBebidas.size() <= 0) return null;
+        else {
             Bebida b = ListBebidas.remove(0);
             return b;
         }
-        else return null;
     }
-
+    public int arrayLong(){
+        return ListBebidas.size();
+    }
 }

@@ -2,23 +2,21 @@ package tarea2;
 
 public class Comprador{
     private String tipoBebida;
-    private int serie;
+    private int cuantoVuelto;
     public Comprador(Moneda m, int cualBebida, Expendedor exp){
         try{
-            exp.comprarBebida(m, 1);
-        
-        } catch (PagoIncorrectoException ex) {
+            
+            Bebida b = exp.comprarBebida(m, cualBebida);
+            cuantoVuelto = m.getValor()-1300;
+            tipoBebida = b.beber();
+        } catch (PagoIncorrectoException | PagoInsuficienteException | NoHayBebidaException ex) {
             System.out.println("error: "+ex.getMessage());
-        } catch (PagoInsuficienteException ex) {
-            System.out.println("error: "+ex.getMessage());
-        } catch (NoHayBebidaException ex) {
-            System.out.println("error: "+ex.getMessage());
-        }
+        }  
     }
     public int cuantoVuelto(){ //de vuelto        
-        return 200;
+        return cuantoVuelto;
     }
     public String queBebiste(){//el sonido de la Bebida: cocacola, sprite
-        return null;
+        return tipoBebida;
     }
 }
