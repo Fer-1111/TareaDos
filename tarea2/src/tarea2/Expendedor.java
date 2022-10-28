@@ -9,6 +9,7 @@ public class Expendedor {
     private final Deposito fanta;
     private final Deposito kem;
     private final int precio;
+    private int vuelto;
 
     public Expendedor(int cantBebidas, int cualBebida) {
         
@@ -56,46 +57,68 @@ public class Expendedor {
             throw new PagoInsuficienteException("Error su moneda ingresada es inferior al precio");
         }
         //NohaybebidaException
-        else if(m.getValor() >= precio && coca.getBebida()==null && cualBebida == 1){
+        else if(m.getValor() >= precio && coca.arrayLong()==0 && cualBebida == 1){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(coca)");
         }
         
-        else if(m.getValor() >= precio && sprite.getBebida()==null&& cualBebida == 2){
+        else if(m.getValor() >= precio && sprite.arrayLong()==0&& cualBebida == 2){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(sprite)");
         }
         
-        else if(m.getValor() >= precio && fanta.getBebida()==null && cualBebida == 3){
+        else if(m.getValor() >= precio && fanta.arrayLong()==0 && cualBebida == 3){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(fanta)");
         }
         
-        else if(m.getValor() >= precio && kem.getBebida()==null && cualBebida == 4){
+        else if(m.getValor() >= precio && kem.arrayLong()==0 && cualBebida == 4){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(kem)");
         }
-        else if(m.getValor()>=1300){
-            if (cualBebida == 1) {
-            return coca.getBebida();
+        else if(m.getValor()>=precio){
+            vuelto = m.getValor() - precio;
+            ArrayMonedas MonedasDelExp = new ArrayMonedas();
+            
+            if (cualBebida == 1) { //compra exitosa de coca
+                for(int i = 0 ; i < cantMonedas100(); i++){
+                    MonedasDelExp.addMoneda(getVuelto());
+                    System.out.println(MonedasDelExp.Monedas(i)); 
+                }
+                //System.out.println("hay "+ MonedasDelExp.arrayLong() +" monedas de 100");
+                return coca.getBebida();
             }
             if (cualBebida == 2) {
-            return sprite.getBebida();
+                for(int i = 0 ; i < cantMonedas100(); i++){
+                    MonedasDelExp.addMoneda(getVuelto());
+                    //System.out.println("hay "+(i+1)+ " monedas"+MonedasDelExp.Monedas(i)); 
+                }
+                return sprite.getBebida();
             }
             if (cualBebida == 3) {
-            return fanta.getBebida();
+                for(int i = 0 ; i < cantMonedas100(); i++){
+                    MonedasDelExp.addMoneda(getVuelto());
+                    //System.out.println("hay "+(i+1)+ " monedas"+MonedasDelExp.Monedas(i)); 
+                }
+                return fanta.getBebida();
             }
             if (cualBebida == 4) {
-            return kem.getBebida();
+                for(int i = 0 ; i < cantMonedas100(); i++){
+                    MonedasDelExp.addMoneda(getVuelto());
+                    //System.out.println("hay "+(i+1)+ " monedas "+MonedasDelExp.Monedas(i)); 
+                }
+                return kem.getBebida();
             }
         }
         return null;
     }
-    public void getVuelto() { //retorna moneda, null si deposito está vacío
-        Vuelto vueltoMaquina = new Vuelto();
+    public Moneda getVuelto() { //retorna moneda, null si deposito está vacío
         Moneda m = new Moneda100();
-        vueltoMaquina.addMoneda(m);
+        return m;
     }
-    public int BebidaQueQueda(){
+    public int BebidaQueQueda(){///////////
         return coca.arrayLong();
+        
+    }
+    public int cantMonedas100(){
+        return vuelto/100;
     }
 }
-
 
 
