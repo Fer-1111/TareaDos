@@ -108,7 +108,12 @@ public class Expendedor {
         }
         return null;
     }
+<<<<<<< HEAD
     public Moneda getVuelto() { //retorna moneda, null si deposito está vacío
+=======
+    public void getVuelto() { //retorna moneda, null si deposito está vacío
+        ArrayMonedas vueltoMaquina = new ArrayMonedas();
+>>>>>>> 0b96ef4544d720218ab18854f4046613b0aa1793
         Moneda m = new Moneda100();
         return m;
     }

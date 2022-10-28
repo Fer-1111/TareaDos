@@ -8,12 +8,16 @@ public class Comprador{
         try{
             Bebida b = null;
             b = exp.comprarBebida(m, cualBebida);
+<<<<<<< HEAD
             //ArrayMonedas MonedasDelExp = new ArrayMonedas();
             for(int i = 0 ; i < exp.cantMonedas100(); i++){
                 //MonedasDelExp.addMoneda(exp.getVuelto());
                 cuantoVuelto += exp.getVuelto().getValor();
             }
 
+=======
+            cuantoVuelto = m.getValor()-1300;
+>>>>>>> 0b96ef4544d720218ab18854f4046613b0aa1793
             tipoBebida = b.beber();
             serie = b.getSerie();
         } catch (PagoIncorrectoException | PagoInsuficienteException | NoHayBebidaException ex) {

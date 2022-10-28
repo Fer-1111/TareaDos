@@ -4,6 +4,7 @@ public class Tarea2 {
 
     public static void main(String[] args){
         Moneda milQuinientos = new Moneda1500();
+<<<<<<< HEAD
         Expendedor exp = new Expendedor(2,1); 
         System.out.println("hay "+exp.BebidaQueQueda()+" bebidas");
         Comprador Sergio = new Comprador(milQuinientos, 1, exp);
@@ -14,8 +15,11 @@ public class Tarea2 {
 /*
 Moneda milQuinientos = new Moneda1500();
         Expendedor exp = new Expendedor(3,1); 
+=======
+        Expendedor exp = new Expendedor(5,2); 
+>>>>>>> 0b96ef4544d720218ab18854f4046613b0aa1793
         System.out.println("hay: "+exp.BebidaQueQueda());
-        Comprador Sergio = new Comprador(milQuinientos, 1, exp);
+        Comprador Sergio = new Comprador(milQuinientos, 2, exp);
         System.out.println("su vuelto es: "+Sergio.cuantoVuelto()+" y quedan: "+exp.BebidaQueQueda()+" bebida: "+Sergio.queBebiste());
         System.out.println("serie bebida: "+Sergio.SerieBebida());
         Sergio = new Comprador(milQuinientos, 1, exp);
