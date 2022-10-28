@@ -18,6 +18,7 @@ public class Deposito {
         if (ListBebidas.size() <= 0) return null;
         else {
             Bebida b = ListBebidas.remove(0);
+            System.out.println(ListBebidas.size());
             return b;
         }
     }

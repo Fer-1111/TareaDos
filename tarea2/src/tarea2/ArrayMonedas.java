@@ -2,10 +2,10 @@ package tarea2;
 
 import java.util.ArrayList;
 
-public class Vuelto {
+public class ArrayMonedas{
     private ArrayList<Moneda> monedasVuelto;
 
-    public Vuelto() {
+    public ArrayMonedas() {
         monedasVuelto = new ArrayList<Moneda>();
     }   
     

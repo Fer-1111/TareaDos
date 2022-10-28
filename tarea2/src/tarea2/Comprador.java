@@ -5,8 +5,8 @@ public class Comprador{
     private int cuantoVuelto;
     public Comprador(Moneda m, int cualBebida, Expendedor exp){
         try{
-            
-            Bebida b = exp.comprarBebida(m, cualBebida);
+            Bebida b = null;
+            b = exp.comprarBebida(m, cualBebida);
             cuantoVuelto = m.getValor()-1300;
             tipoBebida = b.beber();
         } catch (PagoIncorrectoException | PagoInsuficienteException | NoHayBebidaException ex) {

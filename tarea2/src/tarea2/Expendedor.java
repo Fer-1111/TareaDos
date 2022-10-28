@@ -56,19 +56,19 @@ public class Expendedor {
             throw new PagoInsuficienteException("Error su moneda ingresada es inferior al precio");
         }
         //NohaybebidaException
-        else if(m.getValor() >= precio && coca.getBebida()==null && cualBebida == 1){
+        else if(m.getValor() >= precio && coca.arrayLong()==0 && cualBebida == 1){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(coca)");
         }
         
-        else if(m.getValor() >= precio && sprite.getBebida()==null&& cualBebida == 2){
+        else if(m.getValor() >= precio && sprite.arrayLong()==0&& cualBebida == 2){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(sprite)");
         }
         
-        else if(m.getValor() >= precio && fanta.getBebida()==null && cualBebida == 3){
+        else if(m.getValor() >= precio && fanta.arrayLong()==0 && cualBebida == 3){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(fanta)");
         }
         
-        else if(m.getValor() >= precio && kem.getBebida()==null && cualBebida == 4){
+        else if(m.getValor() >= precio && kem.arrayLong()==0 && cualBebida == 4){
             throw new NoHayBebidaException("Error, no hay existencia de la bebida seleccionada(kem)");
         }
         else if(m.getValor()>=1300){
@@ -88,7 +88,7 @@ public class Expendedor {
         return null;
     }
     public void getVuelto() { //retorna moneda, null si deposito está vacío
-        Vuelto vueltoMaquina = new Vuelto();
+        ArrayMonedas vueltoMaquina = new ArrayMonedas();
         Moneda m = new Moneda100();
         vueltoMaquina.addMoneda(m);
     }
