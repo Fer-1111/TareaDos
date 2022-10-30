@@ -3,10 +3,10 @@ package tarea2;
 import java.util.ArrayList;
 
 public class ArrayMonedas{
-    private ArrayList<Moneda> monedasVuelto;
+    private final ArrayList<Moneda> monedasVuelto;
 
     public ArrayMonedas() {
-        monedasVuelto = new ArrayList<Moneda>();
+        monedasVuelto = new ArrayList<>();
     }   
     
     public void addMoneda(Moneda m){
