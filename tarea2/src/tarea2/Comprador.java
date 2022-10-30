@@ -3,33 +3,30 @@ package tarea2;
 public class Comprador{
     private String tipoBebida;
     private int cuantoVuelto;
-    private int serie; // extra, para confirmar que sacamos la bebida correcta
+    private int serie;
     public Comprador(Moneda m, int cualBebida, Expendedor exp){
-        try{
-            Bebida b = null;
-            b = exp.comprarBebida(m, cualBebida);
-
-            //ArrayMonedas MonedasDelExp = new ArrayMonedas();
-            for(int i = 0 ; i < exp.cantMonedas100(); i++){
-                //MonedasDelExp.addMoneda(exp.getVuelto());
-                cuantoVuelto += exp.getVuelto().getValor();
-            }
-
-            cuantoVuelto = m.getValor()-1300;
-
+        try{        
+            
+            Bebida b = exp.comprarBebida(m, cualBebida);
             tipoBebida = b.beber();
-            serie = b.getSerie();
-        } catch (PagoIncorrectoException | PagoInsuficienteException | NoHayBebidaException ex) {
+            serie = b.getSerie(); 
+            cuantoVuelto = exp.vueltoCliente();
+        } 
+        catch(PagoIncorrectoException ex){
             System.out.println("error: "+ex.getMessage());
-        }  
+        }
+        catch(PagoInsuficienteException | NoHayBebidaException ex){
+            cuantoVuelto = m.getValor();
+            System.out.println("error: "+ex.getMessage());
+        }
     }
-    public int cuantoVuelto(){ //de vuelto        
+    public int cuantoVuelto(){        
         return cuantoVuelto;
     }
-    public String queBebiste(){//el sonido de la Bebida: cocacola, sprite
+    public String queBebiste(){
         return tipoBebida;
     }
-    public int SerieBebida(){ // metodo creado para confirmar mi serie
+    public int SerieBebida(){
         return serie;
     }
 }

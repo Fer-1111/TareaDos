@@ -16,6 +16,7 @@ class CocaCola extends Bebida {
         super(serie);
     }
 
+    @Override
     public String beber() {
         return "coca";
     }
@@ -27,6 +28,7 @@ class Sprite extends Bebida {
         super(serie);
     }
 
+    @Override
     public String beber() {
         return "sprite";
     }
@@ -38,6 +40,7 @@ class Fanta extends Bebida {
         super(serie);
     }
 
+    @Override
     public String beber() {
         return "fanta";
     }
@@ -50,6 +53,7 @@ class Kem extends Bebida {
         super(serie);
     }
 
+    @Override
     public String beber() {
         return "kem";
     }

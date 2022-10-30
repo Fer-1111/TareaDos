@@ -11,43 +11,51 @@ class Moneda1500 extends Moneda{
     public Moneda1500(){
         super();
     }
+    @Override
     public int getValor(){
         return 1500;
     }
+    @Override
     public String MonedaDevuelta(){
-        return "1500";
+        return " 1500";
     }
 }
 class Moneda1000 extends Moneda{
     public Moneda1000(){
         super();
     }
+    @Override
     public int getValor(){
         return 1000;
     }
+    @Override
     public String MonedaDevuelta(){
-        return "1000";
+        return " 1000";
     }
 }
 class Moneda500 extends Moneda{
 public Moneda500(){
         super();
     }
+@Override
     public int getValor(){
         return 500;
     }
+@Override
     public String MonedaDevuelta(){
-        return "500";
+        return " 500";
     }
 }
 class Moneda100 extends Moneda{
 public Moneda100(){
         super();
     }
+@Override
     public int getValor(){
         return 100;
     }
+@Override
     public String MonedaDevuelta(){
-        return "--100--";
+        return " 100";
     }
 }
